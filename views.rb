@@ -33,6 +33,15 @@ db.save_doc({
         	return sum(values);	
         }
       '
+    },
+    :by_tag => {
+      :map => '
+        function(doc) {
+        	doc.tag.forEach(function(tag) {
+        		emit(tag, doc.href);
+        	});
+        }
+      '
     }
   }
 })
