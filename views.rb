@@ -13,6 +13,13 @@ db.delete_doc db.get('_design/links') rescue nil
 db.save_doc({
   '_id' => '_design/links',
   :views => {
+    :urls => {
+      :map => '
+        function(doc) {
+          emit(doc._id, null);
+        }
+      '
+    },
     :tags => {
       :map => '
         function(doc) {
