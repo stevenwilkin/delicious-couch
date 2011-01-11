@@ -9,7 +9,7 @@ A few Ruby scripts to backup Delicious bookmarks to CouchDB and provide some sim
 * CouchDB running on port 5984 on your local machine, I recommend the binary distributions from [CouchOne](http://www.couchone.com/get)
 * nokogiri and couchrest gems must be installed
 
-	gem install nokogiri couchrest
+		sudo gem install nokogiri couchrest
 
 
 
